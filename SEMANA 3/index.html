@@ -1,0 +1,126 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Semana 3 — Sitio demostrativo HTML5</title>
+  <meta name="description" content="Demostración de etiquetas semánticas, multimedia, listas, tabla y formulario con HTML5 y CSS." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ESTRUCTURA SEMÁNTICA -->
+  <header class="site-header">
+    <div class="container">
+      <h1>Proyecto Semana 3</h1>
+      <p class="lead">
+        Demostración de <strong>HTML5</strong>, etiquetas <em>semánticas</em> y publicación en GitHub Pages.
+      </p>
+    </div>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="#acerca">Acerca</a></li>
+        <li><a href="#recursos">Recursos multimedia</a></li>
+        <li><a href="#listados">Listas</a></li>
+        <li><a href="#tabla">Tabla</a></li>
+        <li><a href="#contacto">Formulario</a></li>
+        <li><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener">HTML (MDN)</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <section id="acerca" aria-labelledby="acerca-title">
+      <h2 id="acerca-title">Acerca del sitio</h2>
+      <article>
+        <h3>Objetivo</h3>
+        <p>
+          Este sitio muestra el uso de estructura semántica (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+          <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> y <code>&lt;footer&gt;</code>),
+          además de <strong>encabezados</strong>, <em>párrafos con énfasis</em>, listas, tablas, formularios y multimedia.
+        </p>
+      </article>
+    </section>
+    <!-- MULTIMEDIA -->
+    <section id="recursos" aria-labelledby="recursos-title">
+      <h2 id="recursos-title">Recursos multimedia</h2>
+      <article>
+        <h3>Imagen</h3>
+        <img src="assets/imagen1.jpg" alt="Descripción breve de la imagen 1" class="media" />
+      </article>
+      <article>
+        <h3>Video</h3>
+        <video class="media" controls width="640" poster="assets/img/imagen1.jpg">
+          <source src="assets/video1.mp4" type="video/mp4" />
+          Tu navegador no soporta el elemento <code>video</code>.
+        </video>
+      </article>
+    </section>
+    <!-- LISTAS -->
+    <section id="listados" aria-labelledby="listados-title">
+      <h2 id="listados-title">Listas</h2>
+      <article>
+        <h3>Lista desordenada (ul)</h3>
+        <ul>
+          <li>Conceptos de HTML5</li>
+          <li>Etiquetas semánticas</li>
+          <li>Publicación en GitHub Pages</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Lista ordenada (ol)</h3>
+        <ol>
+          <li>Instalar VS Code y Live Server</li>
+          <li>Crear estructura del proyecto</li>
+          <li>Subir a GitHub y publicar</li>
+        </ol>
+      </article>
+    </section>
+    <!-- TABLA -->
+    <section id="tabla" aria-labelledby="tabla-title">
+      <h2 id="tabla-title">Tabla de recursos</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Recurso</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Imagen</td>
+            <td>Archivo JPG cargado en el repositorio</td>
+          </tr>
+          <tr>
+            <td>Video</td>
+            <td>Archivo MP4 con controles</td>
+          </tr>
+          <tr>
+            <td>Documentación</td>
+            <td>Enlace externo a MDN (abre en pestaña nueva)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <!-- FORMULARIO -->
+    <section id="contacto" aria-labelledby="contacto-title">
+      <h2 id="contacto-title">Formulario de contacto</h2>
+      <form class="contact-form" action="#" method="post" novalidate>
+        <div class="form-field">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+        </div>
+        <div class="form-field">
+          <label for="correo">Correo</label>
+          <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required />
+        </div>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 — Proyecto Semana 3. Hecho por Carlos Joseph.</p>
+    </div>
+  </footer>
+</body>
+</html>
