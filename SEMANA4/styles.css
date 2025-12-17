@@ -1,0 +1,52 @@
+
+:root {
+  --brand: #ff5733;
+  --brand-contrast: #ffffff;
+  --header-start: #0d6efd;
+  --header-end: #6610f2;
+}
+
+/* Hero con gradiente y divisor */
+.hero-section { background: linear-gradient(135deg, var(--header-start), var(--header-end)); position: relative; }
+.shape-divider { position: absolute; bottom: -1px; left: 0; right: 0; height: 40px;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.6), rgba(255,255,255,0) 60%); }
+
+/* Marca en navbar */
+.logo-dot { width: 10px; height: 10px; border-radius: 50%; background-color: var(--brand); display: inline-block; }
+
+/* Botón primario personalizado */
+.btn-primary {
+  background-color: var(--brand) !important;
+  border-color: var(--brand) !important;
+  color: var(--brand-contrast) !important;
+  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.15);
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.btn-primary:hover { transform: translateY(-2px) scale(1.02); filter: brightness(1.05); box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2); }
+
+/* Cards */
+.card { border: 1px solid rgba(0,0,0,0.08); border-radius: 1rem; overflow: hidden; box-shadow: 0 1rem 2rem rgba(0,0,0,0.08); }
+.card-img-top { max-height: 220px; object-fit: cover; }
+.hover-lift { transition: transform .25s ease, box-shadow .25s ease; }
+.hover-lift:hover { transform: translateY(-4px); box-shadow: 0 1.25rem 2.5rem rgba(0,0,0,0.12); }
+
+/* Animaciones de entrada */
+.fade-in { animation: fadeIn .6s ease both; }
+.float-in { animation: floatIn .7s ease both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px);} to { opacity: 1; transform: translateY(0);} }
+@keyframes floatIn { from { opacity: 0; transform: translateY(12px) scale(.98);} to { opacity: 1; transform: translateY(0) scale(1);} }
+
+/* Focus accesible */
+.form-control:focus { border-color: var(--header-start); box-shadow: 0 0 0 .2rem rgba(13,110,253,.25); }
+
+/* Footer links */
+footer a { color: #0d6efd; }
+footer a:hover { text-decoration: underline; }
+
+/* Menos movimiento */
+.reduce-motion * { animation: none !important; transition: none !important; }
+
+/* Media query propia */
+@media (max-width: 576px) {
+  body { background-color: #f8f9fb; }
+  .btn-primary { background-color: #0d6efd !important;  .btn-primary { background-color: #0d6efd !important; border-color: #0d6efd !important; }

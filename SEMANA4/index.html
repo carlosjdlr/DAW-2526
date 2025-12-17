@@ -1,0 +1,222 @@
+
+<!doctype html>
+<html lang="es" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi Sitio Web Bootstrap </title>
+  <meta name="description" content="Sitio moderno con Bootstrap 5 y CSS3 avanzado: grid, flexbox, animaciones, transiciones, collapse, formulario y más.">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80" tabindex="0">
+  <!-- Navbar sticky -->
+  <nav id="mainNavbar" class="navbar navbar-expand-md navbar-dark bg-dark sticky-top" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+        <span class="logo-dot"></span>
+        <span>Mi Sitio Mejorado</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+              aria-controls="navContent" aria-expanded="false" aria-label="Alternar navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+          <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Secciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="ms-md-3 mt-3 mt-md-0">
+          <button id="themeToggle" class="btn btn-outline-light btn-sm" aria-pressed="false" aria-label="Cambiar tema claro/oscuro">🌙 Tema</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero-section text-white py-5">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-12 col-lg-6">
+          <h1 class="display-5 fw-bold fade-in">Bootstrap 5 + CSS3 avanzado</h1>
+          <p class="lead">Grid, Flexbox, animaciones, transiciones, collapse, formulario accesible y diseño totalmente responsivo.</p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="#features" class="btn btn-primary btn-lg">Ver secciones</a>
+            <button class="btn btn-outline-light btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#moreInfo" aria-expanded="false" aria-controls="moreInfo">Más detalles</button>
+          </div>
+          <div class="collapse mt-3" id="moreInfo">
+            <div class="card card-body shadow-sm">
+              Este bloque usa <strong>collapse</strong> de Bootstrap con transición integrada. También activamos <em>Scrollspy</em> para resaltar el enlace activo según el scroll.
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 text-center">
+          <img src="assets/imagen1.jpg" class="img-fluid rounded shadow-sm float-in" alt="Ilustración principal">
+        </div>
+      </div>
+    </div>
+    <div class="shape-divider" aria-hidden="true"></div>
+  </header>
+
+  <!-- Cards -->
+  <main class="container my-5" id="features">
+    <div class="row g-4">
+      <!-- 1 -->
+      <div class="col-12 col-md-4">
+        <div class="card h-100 hover-lift">
+          <img src="assets/imagen2.jpg" class="card-img-top img-fluid" alt="Grid y Flexbox">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Grid + Flexbox</h3>
+            <p class="card-text flex-grow-1">Combinamos <strong>Grid</strong> con utilidades <strong>Flex</strong>.</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#featureModal">Ver ejemplo</button>
+          </div>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="col-12 col-md-4">
+        <div class="card h-100 hover-lift">
+          <img src="assets/imagen3.jpg" class="card-img-top img-fluid" alt="Animaciones y transiciones">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Animaciones</h3>
+            <p class="card-text flex-grow-1">`transition`, `transform` y `@keyframes` en hover y entrada suave.</p>
+            <a href="#contacto" class="btn btn-primary">Contáctanos</a>
+          </div>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="col-12 col-md-4">
+        <div class="card h-100 hover-lift">
+          <img src="assets/imagen1.jpg" class="card-img-top img-fluid" alt="Personalización de Bootstrap">
+          <div class="card-body d-flex flex-column">
+            <h3 class="card-title h5">Personalización</h3>
+            <p class="card-text flex-grow-1">Variables, sombras, bordes redondeados y media query propia.</p>
+            <a href="#" class="btn btn-primary">Acción</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="featureModal" tabindex="-1" aria-labelledby="featureModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="featureModalLabel">Ejemplo en Modal</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">Componente <strong>Modal</strong> de Bootstrap para contenido destacado.</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Entendido</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Formulario -->
+  <section class="container my-5" id="contacto" aria-labelledby="contactoTitulo">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="p-4 rounded shadow-sm bg-white">
+          <h2 class="h4 mb-4" id="contactoTitulo">Contacto</h2>
+          <form id="contactForm" action="#" method="post" novalidate>
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                <div class="invalid-feedback">Por favor, escribe tu nombre.</div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="tu@email.com" required>
+                <div class="invalid-feedback">Ingresa un correo válido.</div>
+              </div>
+              <div class="col-12">
+                <label for="comentarios" class="form-label">Comentarios</label>
+                <textarea class="form-control" id="comentarios" name="comentarios" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+                <div class="invalid-feedback">Agrega un comentario.</div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-4">
+              <button type="submit" class="btn btn-primary">Enviar</button>
+              <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#helpPanel" aria-controls="helpPanel">Ayuda</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offcanvas -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="helpPanel" aria-labelledby="helpPanelLabel">
+    <div class="offcanvas-header">
+      <h5 id="helpPanelLabel">Guía rápida</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p>Completa el formulario y presiona <strong>Enviar</strong>. Se validará usando clases de Bootstrap.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-4 mt-5">
+    <div class="container">
+      <small>&copy; 2025 Mi Sitio Bootstrap Mejorado. Todos los derechos reservados.</small>
+      <div class="mt-2">
+        <a href="#" class="text-decoration-none mx-2">Privacidad</a>
+        <a href="#" class="text-decoration-none mx-2">Términos</a>
+        <a href="#contacto" class="text-decoration-none mx-2">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="submitToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Formulario</strong>
+        <small>Ahora</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+      </div>
+      <div class="toast-body">Formulario enviado correctamente (demo).</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Tema claro/oscuro
+    const themeBtn = document.getElementById('themeToggle');
+    themeBtn.addEventListener('click', () => {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-bs-theme') || 'light';
+      const next = current === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-bs-theme', next);
+      themeBtn.setAttribute('aria-pressed', String(next === 'dark'));
+    });
+
+    // Validación + Toast
+    (function() {
+      const form = document.getElementById('contactForm');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+          e.stopPropagation();
+          form.classList.add('was-validated');
+          return;
+        }
+        form.classList.remove('was-validated');
+        const toastEl = document.getElementById('submitToast');
+        const toast = new bootstrap.Toast(toastEl);
+        toast.show();
+      }, false);
+    })();
+
+    // Respeto al usuario con menos movimiento
+    if    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.body.classList.add('reduce-motion');
+    }
+  </script>
+</body>
